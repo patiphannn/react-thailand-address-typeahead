@@ -45,7 +45,7 @@ const preprocess = (data) => {
 };
 const DB = new JQL(preprocess(require('../data.json')));
 
-const resolveResultbyField = (type: string, searchStr: string) => {
+const resolveResultbyField = (type, searchStr) => {
   let possibles = [];
   try {
     possibles = DB.select('*').where(type)
